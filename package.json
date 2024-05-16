@@ -1,6 +1,6 @@
 {
   "name": "custom-component-lib-btn",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "",
   "scripts": {
     "rollup-build-lib": "rollup -c"
@@ -13,10 +13,13 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.3.2",
+    "postcss": "^8.4.38",
+    "postcss-modules": "^6.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rollup": "^4.17.2",
     "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.6.2",
     "typescript": "^5.4.5"
   },
@@ -30,5 +33,4 @@
     "dist"
   ],
   "types": "dist/index.d.ts"
-
 }
