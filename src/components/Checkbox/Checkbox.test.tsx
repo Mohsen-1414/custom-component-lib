@@ -14,19 +14,6 @@ describe("Checkbox Component", () => {
     expect(checkbox).not.toBeChecked();
   });
 
-  //   test("handles onChange event", () => {
-  //     const handleChange = jest.fn();
-  //     render(
-  //       <Checkbox checked={false} onChange={handleChange} label="Test Checkbox" />
-  //     );
-
-  //     const checkbox = screen.getByLabelText("Test Checkbox") as HTMLInputElement;
-  //     fireEvent.click(checkbox);
-
-  //     expect(handleChange).toHaveBeenCalledTimes(1);
-  //     expect(checkbox.checked).toBe(true);
-  //   });
-
   test("can be disabled", () => {
     render(
       <Checkbox
