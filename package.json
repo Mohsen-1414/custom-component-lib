@@ -1,6 +1,6 @@
 {
   "name": "custom-component-lib-btn",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "",
   "scripts": {
     "rollup-build-lib": "rollup -c",

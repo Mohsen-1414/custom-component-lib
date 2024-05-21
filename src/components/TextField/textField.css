@@ -1,0 +1,28 @@
+.textfield-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  
+  .textfield-input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .textfield-input:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+  }
+  
+  .textfield-container.error .textfield-input {
+    border-color: red;
+  }
+  
+  .textfield-error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
