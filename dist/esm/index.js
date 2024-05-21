@@ -2827,11 +2827,12 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = ".btn {\r\n    background-color: #007bff;\r\n    border: none;\r\n    color: white;\r\n    padding: 10px 20px;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    display: inline-block;\r\n    font-size: 16px;\r\n    margin: 4px 2px;\r\n    cursor: pointer;\r\n    border-radius: 4px;\r\n  }\r\n  \r\n  .btn:hover {\r\n    background-color: #0056b3;\r\n  }";
+var css_248z = "/* Base button styles */\r\n.btn {\r\n  border: none;\r\n  padding: 10px 20px;\r\n  cursor: pointer;\r\n  border-radius: 4px;\r\n  font-size: 16px;\r\n  transition: background-color 0.3s ease;\r\n}\r\n\r\n/* Variants */\r\n.btn.primary {\r\n  background-color: #007bff;\r\n  color: white;\r\n}\r\n\r\n.btn.primary:hover {\r\n  background-color: #0056b3;\r\n}\r\n\r\n.btn.secondary {\r\n  background-color: #6c757d;\r\n  color: white;\r\n}\r\n\r\n.btn.secondary:hover {\r\n  background-color: #5a6268;\r\n}\r\n\r\n.btn.danger {\r\n  background-color: #dc3545;\r\n  color: white;\r\n}\r\n\r\n.btn.danger:hover {\r\n  background-color: #c82333;\r\n}\r\n\r\n/* Sizes */\r\n.btn.small {\r\n  padding: 5px 10px;\r\n  font-size: 14px;\r\n}\r\n\r\n.btn.medium {\r\n  padding: 10px 20px;\r\n  font-size: 16px;\r\n}\r\n\r\n.btn.large {\r\n  padding: 15px 30px;\r\n  font-size: 18px;\r\n}\r\n";
 styleInject(css_248z);
 
-const Button = ({ label }) => {
-    return React.createElement("button", { className: "btn" }, label);
+const Button = ({ label, onClick, variant = "primary", size = "medium", }) => {
+    const className = `btn ${variant} ${size}`;
+    return (React.createElement("button", { className: className, onClick: onClick }, label));
 };
 
 export { Button };
